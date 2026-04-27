@@ -1,0 +1,312 @@
+3.a
+
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+
+Aparece un enlace que al hacer click, el navegador reemplaza la página actual por la URL destino (en la misma pestaña)
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+
+Atarget="_blank" indica al navegador que abra la URL en una pestaña o ventana nueva, dejando la página actual intacta.
+
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+
+Agrega atributos que describen el recurso pero no cambian el comportamiento visual.
+
+<a href="#">Click aquí para ir a Google</a>
+
+href="#" es un ancla vacía: al hacer clic, la página no cambia ni navega a Google, simplemente sube al inicio del documento (o no hace nada visible)
+
+<a href="#arriba">Click aquí para volver arriba</a>
+<a name="arriba" id="arriba"></a>
+
+Son dos etiquetas que trabajan juntas.
+La primera tiene href="#arriba": al hacer clic, el navegador busca en la misma página un elemento con id="arriba" y desplaza la vista hasta él.
+La segunda es el destino del salto: el atributo name y el id señalan ese punto en la página. La etiqueta en sí es invisible.
+
+3.b
+
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+
+Imagen fuera, texto dentro del <a>. La imagen es decorativa y no clickeable, solo el texto navega a google.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+
+Imagen dentro del <a>, texto fuera. La imagen actúa como botón/enlace; el texto es plano.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+
+Imagen y texto juntos dentro del <a>. Forman un único enlace compuesto.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+
+Dos <a> separados, cada elemento es un enlace independiente. Aunque en el ejemplo apuntan a la misma URL, podrían apuntar a destinos distintos.
+
+3.c
+
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+
+<ul> — lista no ordenada. El navegador pone viñetas automáticamente. 
+
+<ol>
+  <li>xxx</li>
+  <li>yyy</li>
+  <li>zzz</li>
+</ol>
+
+<ol> simple — lista ordenada en una sola etiqueta. El navegador numera secuencialmente desde 1 de forma automática.
+
+<ol>
+  <li>xxx</li>
+</ol>
+<ol>
+  <li value="2">yyy</li>
+</ol>
+<ol>
+  <li value="3">zzz</li>
+</ol>
+
+<ol> con value en listas separadas — aquí hay tres <ol> distintos, cada uno con un solo <li>. Sin el atributo value, cada lista reiniciaría en 1. El atributo value="2" y value="3" fuerzan manualmente el número que aparece. Visualmente imita una lista continua, pero estructuralmente son tres bloques independientes.
+
+<blockquote>
+  <p>1. xxx<br />
+  2. yyy<br />
+  3. zzz</p>
+</blockquote>
+
+<blockquote> con <br /> — no es una lista en absoluto. Los números "1. 2. 3." son texto plano escrito a mano; <br /> solo agrega saltos de línea; y <blockquote> es semánticamente una cita o texto destacado, no una enumeración.
+
+3.d
+
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+<th> — es la etiqueta diseñada específicamente para encabezados de tabla. El navegador sabe que esa celda es un título de columna y aplica automáticamente negrita + centrado.
+
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Columna1</strong></div></td>
+<td><div align="center"><strong>Columna2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+<td> + <div align="center"> + <strong> — la celda sigue siendo un dato común (<td>). Se necesitan tres etiquetas anidadas para lograr el mismo aspecto visual: el <div> centra el contenido y el <strong> pone la negrita.
+
+3.e
+
+<table width="200">
+      <caption>
+        Título
+      </caption>
+      <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+    </table>
+
+<caption> — es la etiqueta específica para el título de una tabla. El navegador lo coloca automáticamente arriba y lo reconoce como encabezado semántico.
+
+    <table width="200">
+      <tr>
+        <td colspan="3"><div align="center">Título</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+    </table>
+
+<td colspan="3"> + <div align="center"> — el “título” es solo una celda común dentro de la tabla. Se usa colspan para ocupar columnas y <div> para centrar, pero no es un título real.
+
+3.f
+
+    <table width="200">
+      <tr>
+        <td colspan="3"><div align="center">Título</div></td>
+      </tr>
+      <tr>
+        <td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+    </table>
+
+rowspan="2" — la celda se extiende verticalmente y ocupa dos filas. El navegador “fusiona” esas filas en una sola celda alta.
+
+    <table width="200">
+      <tr>
+        <td colspan="3"><div align="center">Título</div></td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+      </tr>
+    </table>
+
+colspan="2" — la celda se extiende horizontalmente y ocupa dos columnas. El navegador “fusiona” esas columnas en una sola celda ancha.
+
+3.g
+
+    <table width="200" border="1">
+      <tr>
+        <td colspan="3"><div align="center">Título</div></td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="50%">&nbsp;</td>
+      </tr>
+    </table>
+
+colspan="2" + rowspan="2" — una sola celda ocupa dos columnas y dos filas a la vez (bloque grande). Además, la tabla mantiene el espaciado por defecto entre celdas.
+
+    <table width="200" border="1" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2"><div align="center">Título</div></td>
+      </tr>
+      <tr>
+        <td rowspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="50%">&nbsp;</td>
+      </tr>
+    </table>
+
+cellpadding="0" + cellspacing="0" — elimina los espacios internos y externos entre celdas (bordes pegados).
+
+3.h
+
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+
+method="post" + input type="password" — Envía los datos de forma más segura (no visibles en la URL) y oculta la clave al escribir. Usa <fieldset> y <legend> para estructurar correctamente.
+
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+
+method="get" + input type="text" — Los datos se envían en la URL (menos seguro) y la clave se ve como texto normal. Usa <label> para mejorar la accesibilidad.
+
+<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="p
+ost" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value=
+"Enviar" />
+</form>
+
+action="mailto:" + type="reset" — Intenta enviar los datos por correo (poco usado y dependiente del cliente de mail). El botón no envía: reset solo limpia el formulario.
+
+3.i
+
+<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+
+Boton, lo que me permite poner una imagen y un texto debajo.
+
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+
+Input de tipo boton que solo me deja ponerle un texto, en este caso CLICK AQUI.
+
+3.j
+
+<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+
+name igual en ambos radios — el navegador los agrupa, por lo que solo se puede seleccionar una opción (X o Y).
+
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+
+name distinto en cada radio — no están agrupados, por lo que se pueden seleccionar ambas opciones al mismo tiempo.
+
+3.k
+
+    <select name="lista">
+      <optgroup label="Caso 1">
+        <option>Mayo</option>
+        <option>Junio</option>
+      </optgroup>
+      <optgroup label="Caso 2">
+        <option>Mayo</option>
+        <option>Junio</option>
+      </optgroup>
+    </select>
+
+<select> sin multiple — solo permite seleccionar una opción. El name="lista" envía un único valor.
+
+    <select name="lista[]" multiple="multiple">
+      <optgroup label=" Caso 1">
+        <option>Mayo</option>
+        <option>Junio</option>
+      </optgroup>
+      <optgroup label=" Caso 2">
+        <option>Mayo</option>
+        <option>Junio</option>
+      </optgroup>
+    </select>
+
+multiple="multiple" + name="lista[]" — permite seleccionar varias opciones. El [] indica que se envían como un arreglo/lista de valores.

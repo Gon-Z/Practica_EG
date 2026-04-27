@@ -1,0 +1,55 @@
+Ejercitación 1 - Responder el siguiente cuestionario
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos
+con HTML?
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y
+obsoleto?
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+5. Qué son los metadatos y cómo se especifican en HTML?
+--------------------------------------------------------------------------------------------------------
+1. Que es HTML?
+    Para publicar información y distribuirla globalmente, se necesita un lenguaje entendido universalmente, una especie de lengua franca de publicación que todas las computadoras puedan comprender potencialmente. El lenguaje de publicación usado por la World Wide Web es el HTML (acrónimo de HyperText Markup Language, Lenguaje para el Formato de Documentos de Hipertexto).
+
+- Cuando fue creado?
+    HTML fue creado a comienzos de la década de 1990 (principios de los años 90), cuando Tim Berners-Lee lo desarrolló mientras trabajaba en el CERN.
+
+- Versiones
+    HTML 2.0 → 1995
+    HTML 3.2 → 1997
+    HTML 4.0 → 1997
+    HTML 4.01 → 1999
+    XHTML → (2000)
+    HTML → 5 (2014 - Actualidad) → ULTIMA!
+
+2. 
+    - Compatibilidad: Mantener el funcionamiento con contenido y navegadores existentes.
+    - Utilidad: Resolver necesidades reales de los usuarios de forma práctica.
+    - Interoperabilidad: Asegurar que funcione igual en distintos navegadores y sistemas.
+    - Acceso universal: Permitir el acceso a la web desde cualquier dispositivo o contexto.
+    - Separar estructura y presentación: Usar HTML para contenido y CSS para diseño visual.
+    - Accesibilidad a la Web: Facilitar el uso para todas las personas, incluyendo discapacidades.
+    - Representación incremental: Permitir que el contenido se muestre progresivamente mientras carga.
+
+3. 
+    - Desaprobado
+    Un elemento o atributo desaprobado es aquel que ha quedado anticuado por la presencia de estructuras nuevas. Los elementos desaprobados se definen en el manual de referencia en los lugares apropiados, pero claramente marcados como desaprobados. Los elementos desaprobados pueden declararse obsoletos en versiones futuras de HTML.
+    Los agentes de usuario deberían seguir dando soporte a los elementos desaprobados por razones de compatibilidad con versiones anteriores.
+    Las definiciones de elementos y atributos indican claramente cuáles son desaprobados.  
+    Esta especificación incluye ejemplos que ilustran cómo evitar el uso de elementos desaprobados. En la mayoría de los casos estos ejemplos dependen de que el agente de usuario soporte hojas de estilo. En general, los autores deberían usar hojas de estilo para lograr efectos estilíticos y de formato de presentación en lugar de utilizar atributos presentacionales de HTML. Los atributos de presentación de HTML han sido desaprobados cuando existen alternativas con hojas de estilo (véase, por ejemplo, [CSS1]).
+
+    - Obsoleto
+    Un elemento o atributo obsoleto es aquél para el cual no hay garantía de soporte por parte de un agente de usuario. Los elementos obsoletos han dejado de estar definidos en la especificación, pero se enumeran por motivos históricos en la sección de cambios del manual de referencia.
+
+4. DTD (Document Type Definition): es una definición que establece las reglas del documento HTML, indicando qué elementos y atributos son válidos y cómo deben estructurarse.
+    - DTD posibles en HTML 4.01:
+    - Strict
+    - Transitional
+    - Frameset
+    
+5. Metadatos: información sobre un documento HTML que describe sus características (como autor, descripción, palabras clave, etc.) y que no forma parte del contenido visible.
+    Especificaciones:
+    - Declaración de una propiedad y de un valor para esta propiedad. Esto puede hacerse de dos maneras:
+        - Desde dentro de un documento, por medio del elemento META.
+        - Desde fuera de un documento, vinculando los metadatos por medio del elemento LINK (véase la sección sobre tipos de vínculos).
+    - Referencia a un perfil en el que se definen la propiedad y sus valores legales. Para designar un perfil, se usa el atributo profile del elemento HEAD.
+

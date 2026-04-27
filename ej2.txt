@@ -1,0 +1,168 @@
+2.a <!-- Código controlado el día 12/08/2009 -->
+    - Seccion: Puede ir en cuualquier parte del documento, tanto HEAD como BODY.
+    - Efecto: Es un comentario. No se muestra en la página, solo sirve para documentación del codigo.
+    - Elementos: No es un elemento como tal. Es una estructura de comentario.
+    - Atributos: No tiene.
+    - Obligatorio: Es opcional.
+
+2.b <div id="bloque1">Contenido del bloque1</div>
+
+    - Seccion: BODY
+    - Efecto: Define un contenedor.
+    - Atributos: id="bloque1"
+        . nombre: id
+        . valor: "bloque1"
+        . Sirve para identificación
+    - Elemento:
+        . tag apertura: <div>
+        . Contenido: Contenido del bloque
+        . Tag cierre: </div>
+    - Obligatorio: <div> no es obligatorio. id opcional.
+
+2.c <img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" />
+
+        - Seccion: BODY
+        - Efecto: Muestra una imagen.
+        - Atributos:
+            - src=""  
+                . Ruta de la imagen
+                . Obligatorio
+            - alt="lugar imagen"
+                . Texto alternativo
+                . Obligatorio
+            - id="im1"
+                . Identificador
+                . Opcional
+            - name="im1"
+                . Nombre
+                . Opcional
+            - width="32"
+                . Ancho
+                . Opcional
+            - height="32"
+                . Alto
+                . Opcional
+            - longdesc="detalles.htm"
+                . Descripción larga de la imagen
+                . Opcional
+        - Elementos: Tag: <img /> (Sin contenido)
+
+2.d <meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+    <meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+        - Seccion: HEAD
+        - Efecto: Define metadatos
+        - Atributos1: 
+            - name="keywords"
+                . Tipo de metadata
+            - lang="es"
+                . Idioma
+            - content="casa, compra, venta, alquiler"
+                . Contenido de palabras clave
+        - Atributos2: 
+            - http-equiv="expires"
+                . Controla comportamiento HTTP
+            - content="16-Sep-2019 7:49 PM"
+                . Fecha de expiración
+        - Elementos: vacío: <meta />
+        - Obligatorio:
+            - <meta>: no obligatorio
+
+2.e <a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>
+
+
+        - Sección: BODY
+        - Efecto: Crea un enlace (hipervínculo).
+        - Elementos:<a>
+            . Apertura: <a>
+            . Contenido: Resumen HTML
+            . Cierre: </a>
+        - Atributos:
+            - href="http://www.e-style.com.ar/resumen.html"
+                . URL destino
+                . Obligatorio
+            - type="text/html"
+                . Tipo de contenido
+                . Opcional
+            - hreflang="es"
+                . Idioma del recurso
+                . Opcional
+            - charset="utf-8"
+                . Codificación
+                . Opcional
+            - rel="help"
+                . Relación del enlace
+                . Opcional
+
+2.f <table width="200" summary="Datos correspondientes al ejercicio vencido">
+    <caption align="top"> Título </caption>
+    <tr>
+    <th scope="col">&nbsp;</th>
+    <th scope="col">A</th>
+    <th scope="col">B</th>
+    <th scope="col">C</th>
+    </tr>
+    <tr>
+    <th scope="row">1º</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <th scope="row">2º</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    - Elemento Principal: 
+        - <table> ... </table>
+    - Elementos Secundarios:
+        - <caption> ... </caption> → elemento caption
+        - <tr> ... </tr> → elemento fila
+        - <th> ... </th> → elemento encabezado
+        - <td> ... </td> → elemento celda
+    - Etiquetas:
+        <table> </table> → obligatorio
+        <caption> </caption> → opcional (título de la tabla)
+        <tr> </tr> → obligatorio (filas)
+        <th> </th> → opcional (celdas de encabezado)
+        <td> </td> → opcional (celdas de datos)
+    - Atributos:
+        - width="200" → ancho de la tabla → opcional
+        - summary="..." → descripción de la tabla → opcional
+
+        En <caption>:
+            - align="top" → posición del título → opcional (obsoleto)
+
+        En <th>:
+            - scope="col" → indica encabezado de columna → opcional
+            - scope="row" → indica encabezado de fila → opcional
+    - Efecto:
+        . Crea una tabla con:
+        . Un título: “Título”
+        . 3 columnas (A, B, C)
+        . 2 filas (1º y 2º)
+        . Celdas vacías (&nbsp;)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Seccion:
+- Efecto:
+- Atributos:
+- Elementos:
+- Obligatorio:
