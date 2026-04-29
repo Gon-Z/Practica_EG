@@ -1,0 +1,62 @@
+Declaraciones:
+
+* {color:green; }
+a:link {color:gray }
+a:visited{color:blue }
+a:hover {color:fuchsia }
+a:active {color:red }
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+.contenido{font-size: 14px;font-weight: bold; }
+
+Codigo1:
+
+<body>
+  <p class="contenido" style="font-weight: normal">
+    Este es un texto ...............
+  </p>
+  <table>
+    <tr>
+      <td>Y esta es una tabla.......</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.google.com.ar">con un enlace</a></td>
+    </tr>
+  </table>
+</body>
+
+En este código:
+El párrafo <p class="contenido" style="font-weight: normal;"> recibe tres fuentes de estilo que interactúan:
+    - De * → color verde
+    - De p → arial/helvetica, 10px, negro (sobreescribe el verde del *)
+    - De .contenido → 14px, negrita
+Del style="" inline → font-weight: normal (sobreescribe la negrita de .contenido)
+Resultado: texto en arial, 14px, color negro, sin negrita.
+La tabla y sus celdas <td> solo reciben la regla *, ya que no son <p> ni tienen clase .contenido.
+Resultado: texto en verde (color heredado de *).
+El enlace <a> recibe * (verde) pero las pseudoclases lo sobreescriben según el estado: gris, azul, fucsia o rojo.
+
+
+Codigo2:
+
+<body class="contenido">
+  <p>Este es un texto................</p>
+  <table>
+    <tr>
+      <td>Y esta es una tabla.......</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.google.com.ar">con un enlace</a></td>
+    </tr>
+  </table>
+</body>
+
+En este código:
+El <body> tiene la clase .contenido, lo que significa que todos sus hijos heredan 14px y negrita, ya que son propiedades heredables en CSS.
+El párrafo <p> ahora no tiene clase ni estilo inline:
+    - De * → verde
+    - De p → arial/helvetica, 10px, negro (sobreescribe el verde)
+Hereda de body.contenido → 14px y negrita, pero p define 10px explícitamente, entonces 10px gana
+Resultado: texto en arial, 10px, negro, en negrita (la negrita sí se hereda porque p no la sobreescribe).
+La tabla y <td> heredan de body.contenido → 14px y negrita. También reciben * → verde.
+Resultado: texto en verde, 14px, en negrita.
+El enlace <a> hereda negrita y 14px del body. El color lo manejan las pseudoclases igual que antes.

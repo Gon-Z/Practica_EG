@@ -1,0 +1,57 @@
+1. ¿ Qué es CSS y para qué se usa? 
+
+CSS son las siglas de Cascading Style Sheets, que en español se traduce como Hojas de Estilo en Cascada. Es una tecnología estándar, definida por el World Wide Web Consortium (W3C), que se utiliza fundamentalmente para controlar la apariencia y el formato de una página web.
+- Su función principal es permitir la separación entre el contenido (la información y estructura definida en HTML o XML) y la presentación (el diseño visual).
+- Mientras que el HTML se concentra en la estructura del documento, el CSS describe cómo esos elementos deben ser presentados al usuario.
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan? 
+
+Las hojas de estilo en CSS están compuestas de reglas. Y cada regla tiene tres partes: 
+Estructura básica: Una regla está compuesta por dos partes principales: un selector y un bloque de declaración          
+1 - El Selector: Es el enlace con el documento; especifica qué elementos HTML (como h1, p, etc.) se verán afectados por el estilo. Se pueden agrupar varios selectores separándolos con comas para aplicarles la misma regla.                                                                                                  
+2 - La Declaración: Se escribe dentro de llaves { } y define el efecto visual que se aplicará. Cada declaración tiene dos componentes:
+    - Propiedad: El aspecto que se desea cambiar (por ejemplo, color, font-size)
+    - Valor: El ajuste específico que se le asigna a esa propiedad (por ejemplo, red, 25px), separado de la propiedad por dos puntos :
+3 - Múltiples estilos: Una sola regla puede contener varias declaraciones dentro de sus llaves, siempre que se separen entre sí con puntos y comas ;
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento? 
+
+- Hoja de estilo externa: Consiste en agrupar las reglas de estilo en un archivo independiente (con extensión .css) y vincularlo al documento HTML mediante la etiqueta <link> dentro de la sección <head>
+- En la cabecera (Interna): Los estilos se definen directamente en el interior del documento HTML que se quiere diseñar, generalmente dentro de la sección <head> utilizando el elemento <style>
+- Directamente en la marca (En línea): Se aplican los estilos a un elemento específico del HTML utilizando el atributo style dentro de su etiqueta en el <body>
+
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+
+- Selectores de elemento (o de etiqueta): Son los más básicos y funcionan como un enlace directo entre el documento y el estilo. Seleccionan todas las instancias de una marca HTML específica (como h1, p, body, etc.) para aplicarles una declaración
+    Ejemplo: h1 { color: red; } — Esta regla indica que todos los elementos de encabezado <h1> del documento se verán afectados por el color rojo
+- Selectores agrupados: Se utilizan para aplicar el mismo estilo a varios elementos diferentes de forma simultánea, lo que ayuda a simplificar el código de la hoja de estilo. Para ello, se escriben los selectores deseados separados por comas
+    Ejemplo: h1, h2, h3 { color: red; } — Esto aplica el color rojo a los tres niveles de encabezados a la vez
+    Otro ejemplo: p, address { color: red; } — Aplica el mismo color tanto a los párrafos como a los elementos de dirección
+
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos? 
+
+
+En CSS, una pseudo-clase es una palabra clave que se añade a un selector para especificar un estado especial del elemento seleccionado. Permite aplicar estilos a un elemento no solo por su posición en la estructura del documento, sino también en respuesta a factores externos o a la interacción del usuario. 
+Su sintaxis se caracteriza por llevar dos puntos : seguidos del nombre de la pseudo-clase (por ejemplo: selector:pseudo-clase).
+- Pseudo-clases más utilizadas para vínculos (<a>)
+    Para controlar el diseño de los enlaces según el estado en el que se encuentren, las más comunes son:
+    :link: Selecciona un vínculo que aún no ha sido visitado.
+    :visited: Selecciona un vínculo que el usuario ya ha visitado.
+    :hover: Se activa cuando el usuario pasa el cursor (puntero del ratón) sobre el vínculo.
+    :active: Se activa en el momento preciso en que el usuario hace clic en el vínculo.
+
+6. ¿ Qué es la herencia? 
+
+La herencia es el mecanismo por el cual un elemento adopta automáticamente las propiedades de estilo de los elementos en los que está incluido. En términos simples, los elementos hijos heredan los valores de las propiedades (como el color o el tipo de letra) de su elemento padre.
+    Por ejemplo, si defines un color de texto para el <body>, todos los párrafos <p> dentro de él tendrán ese mismo color a menos que les asignes uno específicamente.
+
+
+7. ¿ En qué consiste el proceso denominado cascada? 
+
+El proceso de cascada es el mecanismo por el cual el navegador determina el formato final de un elemento combinando todas las reglas de estilo que le afectan.
+En resumen, funciona así:
+    - Combinación: Se suman los estilos provenientes de distintas fuentes (hojas externas, internas o en línea).
+    - Jerarquía y herencia: Al elemento le afectan tanto sus propias reglas como las de los elementos que lo contienen (padres).
+    - Resolución de conflictos: Si varias reglas definen la misma propiedad para un elemento, el navegador aplica la que aparece en último lugar en el código.
